@@ -12,7 +12,8 @@
     "@vue/cli": "^3.0.0-rc.3",
     "element-ui": "^2.4.3",
     "guid": "0.0.12",
-    "vue": "^2.5.16"
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.15",

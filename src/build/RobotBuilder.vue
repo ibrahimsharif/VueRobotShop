@@ -1,6 +1,5 @@
      <template>
          <div>
-
         <div class="content">
                 <div class="preview">
                     <collapsible-section>
@@ -70,13 +69,11 @@
 import PartSelector from './PartSelector.vue';
 import createdMixin from './created-hook-mixin';
 import availableParts from '../data/parts';
-import CollapsibleSection from "../shared/CollapsibleSection";
-
 
 export default {
   name: 'RobotBuilder',
   mixins: [createdMixin],
-  components: {CollapsibleSection, PartSelector },
+  components: { PartSelector },
   data() {
     return {
       availableParts,
@@ -117,7 +114,6 @@ export default {
 
   },
 };
-
 </script>
 
      <style  scoped>
