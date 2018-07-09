@@ -2,7 +2,6 @@
          <div>
         <div class="content">
                 <div class="preview">
-                    <collapsible-section>
                     <div class="preview-content">
                         <div class="top-row">
                             <img :src="selectedRobot.head.src"/>
@@ -18,9 +17,7 @@
                         <button @click="addToCart" class="add-to-cart">Add to cart
                         </button>
                     </div>
-                    </collapsible-section>
                 </div>
-
         </div>
           <div class="top-row">
         <PartSelector :parts="availableParts.heads"

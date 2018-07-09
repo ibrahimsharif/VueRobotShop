@@ -28,7 +28,7 @@
 
 
 export default {
-  // TestingfromLenovoLaptop name: 'app',
+
 };
 </script>
 
