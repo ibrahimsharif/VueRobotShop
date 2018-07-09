@@ -3,7 +3,16 @@
 <header>
   <nav>
     <ul>
-   <li class="nav-item"> <img class="logo" src="./assets/build-a-bot-logo.png"/>Build-a-boot </li>
+  <router-link :to="{name:'HomePage'}" exact>
+      <li class="nav-item">
+          <img class="logo" src="./assets/build-a-bot-logo.png"/>Build-a-boot
+      </li>
+  </router-link>
+        <router-link :to="{name:'RobotBuilder'}" exact>
+            <li class="nav-item">
+              Build a Bot
+            </li>
+        </router-link>
     </ul>
   </nav>
 </header>
@@ -19,7 +28,7 @@
 
 
 export default {
-  name: 'app',
+  // TestingfromLenovoLaptop name: 'app',
 };
 </script>
 
@@ -56,6 +65,10 @@ ul {
   height: 30px;
 }
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+.router-link-active {
+    color: azure;
 }
 </style>
+
