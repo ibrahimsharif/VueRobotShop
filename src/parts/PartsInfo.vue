@@ -13,7 +13,17 @@
 import store from '../data/parts';
 
 export default {
-
+  props: {
+    partType: {
+      type: String,
+    },
+    id: {
+      type: [String, Number],
+      validator(value) {
+        return Number.isInteger(Number(value));
+      },
+    },
+  },
   name: 'PartsInfo',
   data() {
     return {
@@ -23,7 +33,7 @@ export default {
 
   computed: {
     RobotPartInfo() {
-      const { partType, id } = this.$route.params;
+      const { partType, id } = this;
 
       return store[partType].find(item => item.id === +id);
     },
