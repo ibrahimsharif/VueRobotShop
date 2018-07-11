@@ -16,38 +16,35 @@
     </ul>
   </nav>
 </header>
+      <div class="container">
+          <aside class="aside">
+            <router-view name="sidebar"></router-view>
+          </aside>
     <main>
-      <Robotbuilder/>
-        <router-view></router-view>
+        <router-view name="default"></router-view>
     </main>
-
+  </div>
   </div>
 </template>
 
 <script>
-
-
-export default {
-
-};
+export default {};
 </script>
 
 <style>
-body{
-  background: linear-gradient( to bottom,#555,#999);
+body {
+  background: linear-gradient(to bottom, #555, #999);
   background-attachment: fixed;
-
 }
-main{
-  margin: auto;
+main {
   padding: 30px;
   background-color: white;
-  width: 1024px;
+  width: 964px;
   min-height: 300px;
 }
 header {
   background-color: #999;
-  width: 1084px;
+  width: 1184px;
   margin: 0 auto;
 }
 ul {
@@ -65,10 +62,20 @@ ul {
   height: 30px;
 }
 #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
 }
 .router-link-active {
-    color: azure;
+  color: azure;
+}
+.container {
+  display: flex;
+  margin: 10px auto 0 auto;
+  justify-content: center;
+}
+.aside {
+  padding: 30px;
+  background: #aaa;
+  width: 100px;
+  min-height: 300px;
 }
 </style>
-
