@@ -71,8 +71,18 @@ export default {
   name: 'RobotBuilder',
   mixins: [createdMixin],
   components: { PartSelector },
+  beforeRouteLeave(to, from, next) {
+    if (this.AddToCartBeforeLeave) {
+      next(true);
+    } else {
+      // eslint-disable-next-line no-restricted-globals
+      const meassge = confirm('be sure to checkout');
+      next(meassge);
+    }
+  },
   data() {
     return {
+      AddToCartBeforeLeave: false,
       availableParts,
       cart: [],
       selectedRobot: {
@@ -101,11 +111,13 @@ export default {
                 robot.base.cost;
 
       console.log(price);
-      this.cart.push(Object.assign({}, robot, { price }));
+
+      $store.AddToCart(Object.assign({}, robot, { price }));
 
       this.cart.forEach((Robot) => {
         console.log(Robot);
       });
+      this.AddToCartBeforeLeave = true;
     },
 
 
